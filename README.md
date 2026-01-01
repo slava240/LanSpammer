@@ -41,6 +41,47 @@ java LanSpammer.java
 
 
 
+## ⚙️ Configuration & Network Binding
+
+By default, Java may pick the wrong network interface (e.g., a virtual adapter or a secondary Wi-Fi card). To ensure others can see your broadcast, you must bind the application to your active network IP.
+
+### 1. Identify Your IP
+
+Open your terminal and find your local IP address (e.g., `192.168.x.x` or your specific virtual network IP):
+
+* **Windows:** `ipconfig`
+* **Linux/macOS:** `ifconfig` or `ip a`
+
+### 2. Update the Source Code
+
+Locate the `localIp` variable in the code and replace it with your actual address:
+
+```java
+// Change this to your specific Network Interface IP
+String localIp = "YOUR_IP_HERE"; 
+
+```
+
+### 3. Adjusting TTL (Time To Live)
+
+The `setTimeToLive(int ttl)` method determines how many "hops" (routers) the packet can pass through.
+
+* `1`: Stays within your immediate local subnet (Default).
+* `4+`: Recommended for complex virtual networks to ensure the packet reaches all peers.
+
+## 📝 Color Formatting
+
+You can use Minecraft color symbols (§) to style your signature:
+
+* `§b` - Aqua
+* `§l` - **Bold**
+* `§k` - Obfuscated (Glitch effect)
+* `§6` - Gold
+
+**Example:** `§l§6[SERVER] §bMy Signature`
+
+
+
 ## 📝 Configuration
 
 You can modify the following variables directly in the source code to change the broadcast behavior:
