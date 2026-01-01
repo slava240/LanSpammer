@@ -54,7 +54,7 @@ Open your terminal and find your local IP address (e.g., `192.168.x.x` or your s
 
 ### 2. Update the Source Code
 
-Locate the `localIp` variable in the code and replace it with your actual address:
+Locate the `yourIp` variable in the code and replace it with your actual address:
 
 ```java
 // IP
