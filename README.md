@@ -1,3 +1,4 @@
+P.S. Прога сделана CompotAdmin
 # LanSpammer
 
 A lightweight Java-based tool designed to demonstrate how the Minecraft "Local World" discovery protocol works. This application uses **UDP Multicast** to announce virtual game sessions to all Minecraft clients within the same network segment.
